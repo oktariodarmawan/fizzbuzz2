@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <header>
+        <h1>GET A FIZZBUZZ RESULT</h1>
+    </header>    
+
+    <div class='container'>
+        <p>type a number:</p>
+        <input type="text" id='text'>
+        <button onclick="submit()">Submit</button>
+        <br>
+        <h2 id='result'>
+
+        </h2>
+    </div>
+
+
+
+    <script>
+     
+     let result = document.getElementById('result');
+
+    function submit(){
+    let list = document.getElementById('text').value;
+    
+        if(list %3==0 && list%5==0){
+            console.log('fizzbuzz');
+            result.innerHTML = 'fizzbuzz'
+        }
+        else if(list %5==0){
+            console.log('buzz');
+            result.innerHTML = 'buzz'
+        }
+        else if(list %3==0){
+            console.log('fizz');
+            result.innerHTML = 'fizz'
+        }
+        else{
+            result.innerHTML = list
+        }
+    
+}
+
+    </script>
+</body>
+</html>
